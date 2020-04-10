@@ -3,12 +3,12 @@ import React from 'react';
 import './App.css';
 
 
-import GameHistory from "./GameController";
+import GameController from "./GameController";
 
 function App() {
   return (
     <div className="App">
-     <GameHistory/>
+     <GameController/>
     </div>
   );
 }
