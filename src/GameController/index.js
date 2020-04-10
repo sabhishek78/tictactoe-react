@@ -100,7 +100,8 @@ class GameController extends React.Component {
             <div>
                 {
                     this.state.gridList.map((item, index) => (<div>
-                        <button onClick={()=>{this.setState({
+                        <button onClick={()=>{
+                            this.setState({
                            squares:this.state.gridList[index] ,
                             gridList:this.state.gridList.slice(0,index+1),
                         })}}>
