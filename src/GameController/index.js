@@ -4,15 +4,7 @@ import React, { useState } from 'react';
 
 
 // class GameController extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             squares: Array(9).fill(null),
-//             isXNext: true,
-//             status: 'Player X to move',
-//             gridList: [Array(9).fill(null),]
-//         }
-//     };
+//
 //
 //     handleClick(index) {
 //         let squaresCopy = this.state.squares.slice();
@@ -93,7 +85,7 @@ import React, { useState } from 'react';
 //         }
 //         return false;
 //     }
-//
+
 //     render() {
 //         return (<div>
 //             <Grid squares={this.state.squares} isXNext={this.state.isXNext} status={this.state.status}
@@ -194,7 +186,7 @@ function GameController(){
         console.log("GridListCopy=" + gridListCopy);
     }
     return (<div>
-        <Grid squares={squares} isXNext={isXNext} status={status}
+        <Grid squares={squares} status={status}
               handleClick={(index) => handleClick(index)}/>
         <div>
             {

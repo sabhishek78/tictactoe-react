@@ -4,10 +4,6 @@
     <list default="true" id="95f69698-c010-4db1-8027-8021e45f6563" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameController/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grid/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Square/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Square/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,23 @@
       <workItem from="1586495440417" duration="1991000" />
       <workItem from="1586497459350" duration="1774000" />
       <workItem from="1586499530568" duration="2159000" />
-      <workItem from="1586501886214" duration="301000" />
+      <workItem from="1586501886214" duration="330000" />
+      <workItem from="1586511085326" duration="598000" />
+      <workItem from="1586514502895" duration="88000" />
+      <workItem from="1586516781196" duration="1328000" />
+      <workItem from="1586518579540" duration="599000" />
+      <workItem from="1586520435212" duration="602000" />
+      <workItem from="1586522457426" duration="599000" />
+      <workItem from="1586529065066" duration="1794000" />
+      <workItem from="1586530886546" duration="1786000" />
+      <workItem from="1586532703458" duration="240000" />
+      <workItem from="1586575898951" duration="1151000" />
+      <workItem from="1586594642976" duration="681000" />
+      <workItem from="1586597090536" duration="885000" />
+      <workItem from="1586598907740" duration="627000" />
+      <workItem from="1586600719725" duration="907000" />
+      <workItem from="1586602543954" duration="644000" />
+      <workItem from="1586604435117" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="X and O implemented">
       <created>1585806507635</created>
@@ -156,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586495631086</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="hooks implemented">
+      <created>1586502199362</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586502199362</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,17 +198,18 @@
     <MESSAGE value="X and O implemented" />
     <MESSAGE value="move history implemented" />
     <MESSAGE value="function" />
-    <option name="LAST_COMMIT_MESSAGE" value="function" />
+    <MESSAGE value="hooks implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="hooks implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="518" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586241502651">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="518" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586241502651" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1586501837116">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1586502198762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586501837116" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586502198762" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1585815106214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -198,9 +218,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="637" y="307" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1586248733425" />
-    <state x="361" y="127" key="Vcs.Push.Dialog.v2" timestamp="1586502173554">
+    <state x="576" y="49" key="RollbackChangesDialog" timestamp="1586598926605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="127" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586502173554" />
+    <state x="576" y="49" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586598926605" />
+    <state x="361" y="127" key="Vcs.Push.Dialog.v2" timestamp="1586602567296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="127" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586602567296" />
   </component>
 </project>
