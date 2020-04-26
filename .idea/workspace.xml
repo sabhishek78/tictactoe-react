@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95f69698-c010-4db1-8027-8021e45f6563" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/lecture_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tic_tac_toe_react.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameController/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +20,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../project1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -138,7 +141,13 @@
       <workItem from="1586598907740" duration="627000" />
       <workItem from="1586600719725" duration="907000" />
       <workItem from="1586602543954" duration="644000" />
-      <workItem from="1586604435117" duration="599000" />
+      <workItem from="1586604435117" duration="885000" />
+      <workItem from="1586670587329" duration="9000" />
+      <workItem from="1587115124480" duration="8000" />
+      <workItem from="1587120848410" duration="796000" />
+      <workItem from="1587356073239" duration="1516000" />
+      <workItem from="1587790734200" duration="3192000" />
+      <workItem from="1587818499621" duration="8379000" />
     </task>
     <task id="LOCAL-00001" summary="X and O implemented">
       <created>1585806507635</created>
@@ -175,24 +184,30 @@
       <option name="project" value="LOCAL" />
       <updated>1586502199362</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="hooks implemented">
+      <created>1586606108989</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586606108989</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="X and O implemented" />
@@ -206,10 +221,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="518" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586241502651" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1586502198762">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1586606108380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586502198762" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586606108380" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1585815106214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -218,13 +233,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="637" y="307" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1586248733425" />
+    <state width="1515" height="81" key="GridCell.Tab.0.bottom" timestamp="1587870105878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="81" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587870105878" />
+    <state width="1515" height="81" key="GridCell.Tab.0.center" timestamp="1587870105878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="81" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587870105878" />
+    <state width="1515" height="81" key="GridCell.Tab.0.left" timestamp="1587870105878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="81" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587870105878" />
+    <state width="1515" height="81" key="GridCell.Tab.0.right" timestamp="1587870105878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="81" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587870105878" />
     <state x="576" y="49" key="RollbackChangesDialog" timestamp="1586598926605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="576" y="49" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586598926605" />
-    <state x="361" y="127" key="Vcs.Push.Dialog.v2" timestamp="1586602567296">
+    <state x="361" y="127" key="Vcs.Push.Dialog.v2" timestamp="1586606115253">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="127" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586602567296" />
+    <state x="361" y="127" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586606115253" />
   </component>
 </project>

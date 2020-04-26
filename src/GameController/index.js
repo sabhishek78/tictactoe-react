@@ -114,7 +114,8 @@ function GameController(){
     const [isXNext,updateX]=useState(true);
     const[status,updateStatus]=useState('Player X to move');
     const[gridList,updateGridList]=useState([Array(9).fill(null)]);
-
+    const[sliceIndex,updateSliceIndex]=useState(1);
+    const[buttonClicked,updateButtonClicked]=useState(false);
     function checkForDraw(squaresCopy) {
         console.log("Checking for Draw");
         for (var i = 0; i < 9; i++) {
@@ -159,13 +160,18 @@ function GameController(){
     }
 
     function handleClick(index) {
+
         let squaresCopy = squares.slice();
-        let gridListCopy = gridList.slice();
-        gridListCopy.push(squaresCopy);
-        if (squaresCopy[index] !== null) {
+        console.log('squares Copy before move='+squaresCopy);
+        let gridListCopy = buttonClicked?gridList.slice(0,sliceIndex):gridList.slice();
+        updateButtonClicked(false);
+        console.log('grid List copy='+gridListCopy);
+        gridListCopy.push(squaresCopy);// gridList copy updated with old move
+        console.log('grid List copy after pushing square copy='+gridListCopy);
+        if (squaresCopy[index] !== null) {  //if a filled square is clicked nothing will happen
             return;
         }
-        squaresCopy[index] = isXNext ? 'X' : 'O';
+        squaresCopy[index] = isXNext ? 'X' : 'O';// square updated
         if (checkForDraw(squaresCopy)) {
             updateSquares(squaresCopy);
             updateX( !isXNext);
@@ -178,24 +184,28 @@ function GameController(){
             updateStatus('You Win!!');
             updateGridList(gridListCopy);
         } else {
+            console.log('grid List copy='+gridListCopy);
             updateSquares(squaresCopy);
             updateX( !isXNext);
             updateStatus(isXNext ? 'Player O to move' : 'Player X to move');
             updateGridList(gridListCopy);
         }
-        console.log("GridListCopy=" + gridListCopy);
+        console.log('squares Copy after move='+squaresCopy);
+         console.log('grid List ='+gridList);
     }
     return (<div>
         <Grid squares={squares} status={status}
               handleClick={(index) => handleClick(index)}/>
         <div>
             {
-                gridList.map((item, index) => (<div>
-                    <button onClick={()=>{
-                        updateSquares(gridList[index]);
-                        updateGridList(gridList.slice(0,index+1));
+                gridList.map((item) => (<div>
+                    <button key={item} onClick={()=>{
+                        updateButtonClicked(true);
+                        updateSquares(item);
+                        updateSliceIndex(gridList.indexOf(item)+1);
+
                     }}>
-                        move number {index}
+                        move number {gridList.indexOf(item)}
                     </button>
                 </div>))
             }
