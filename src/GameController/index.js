@@ -116,10 +116,11 @@ function GameController(){
     const[gridList,updateGridList]=useState([Array(9).fill(null)]);
     const[sliceIndex,updateSliceIndex]=useState(1);
     const[buttonClicked,updateButtonClicked]=useState(false);
+    const[win,updateWin]=useState(false);
     function checkForDraw(squaresCopy) {
         console.log("Checking for Draw");
         for (var i = 0; i < 9; i++) {
-            if (squaresCopy[i] == null) {
+            if (squaresCopy[i] === null) {
                 return false;
             }
         }
@@ -128,7 +129,7 @@ function GameController(){
 
     function checkForWin(squaresCopy, player) {
         console.log("Checking forWin");
-        if (player == null) {
+        if (player === null) {
             return false;
         }
         for (var j = 0; j < 3; j = j + 3) {
@@ -168,7 +169,7 @@ function GameController(){
         console.log('grid List copy='+gridListCopy);
         gridListCopy.push(squaresCopy);// gridList copy updated with old move
         console.log('grid List copy after pushing square copy='+gridListCopy);
-        if (squaresCopy[index] !== null) {  //if a filled square is clicked nothing will happen
+        if (squaresCopy[index] !== null || win) {  //if a filled square is clicked nothing will happen
             return;
         }
         squaresCopy[index] = isXNext ? 'X' : 'O';// square updated
@@ -183,6 +184,7 @@ function GameController(){
             updateX( !isXNext);
             updateStatus('You Win!!');
             updateGridList(gridListCopy);
+            updateWin(true);
         } else {
             console.log('grid List copy='+gridListCopy);
             updateSquares(squaresCopy);
