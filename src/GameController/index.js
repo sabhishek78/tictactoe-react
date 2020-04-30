@@ -111,12 +111,25 @@ import React, { useState } from 'react';
 
 function GameController(){
     const [squares,updateSquares]=useState(Array(9).fill(null));
-    const [isXNext,updateX]=useState(true);
     const[status,updateStatus]=useState('Player X to move');
     const[gridList,updateGridList]=useState([Array(9).fill(null)]);
     const[sliceIndex,updateSliceIndex]=useState(1);
     const[buttonClicked,updateButtonClicked]=useState(false);
     const[win,updateWin]=useState(false);
+
+    function isXMove(squaresCopy){
+        let xMoves=0;
+        let oMoves=0;
+        for (var i = 0; i < 9; i++) {
+            if (squaresCopy[i] === 'X') {
+                xMoves++;
+            }
+            if (squaresCopy[i] === 'O') {
+                oMoves++;
+            }
+        }
+        return xMoves===oMoves;
+    }
     function checkForDraw(squaresCopy) {
         console.log("Checking for Draw");
         for (var i = 0; i < 9; i++) {
@@ -172,30 +185,28 @@ function GameController(){
         if (squaresCopy[index] !== null || win) {  //if a filled square is clicked nothing will happen
             return;
         }
-        squaresCopy[index] = isXNext ? 'X' : 'O';// square updated
+        squaresCopy[index] = isXMove(squaresCopy) ? 'X' : 'O';// square updated
         if (checkForDraw(squaresCopy)) {
             updateSquares(squaresCopy);
-            updateX( !isXNext);
             updateStatus('Draw!');
             updateGridList(gridListCopy);
         } else if (checkForWin(squaresCopy, squaresCopy[index])) {
             console.log("win detected!");
             updateSquares(squaresCopy);
-            updateX( !isXNext);
             updateStatus('You Win!!');
             updateGridList(gridListCopy);
             updateWin(true);
         } else {
             console.log('grid List copy='+gridListCopy);
             updateSquares(squaresCopy);
-            updateX( !isXNext);
-            updateStatus(isXNext ? 'Player O to move' : 'Player X to move');
+            updateStatus(isXMove(squaresCopy) ? 'Player X to move' : 'Player O to move');
             updateGridList(gridListCopy);
         }
         console.log('squares Copy after move='+squaresCopy);
          console.log('grid List ='+gridList);
     }
-    return (<div>
+    return (
+        <div>
         <Grid squares={squares} status={status}
               handleClick={(index) => handleClick(index)}/>
         <div>
@@ -205,14 +216,14 @@ function GameController(){
                         updateButtonClicked(true);
                         updateSquares(item);
                         updateSliceIndex(gridList.indexOf(item)+1);
-
+                        updateWin(false);
+                        updateStatus(isXMove(gridList[gridList.indexOf(item)]) ? 'Player X to move' : 'Player O to move');
                     }}>
                         move number {gridList.indexOf(item)}
                     </button>
                 </div>))
             }
         </div>
-
     </div>);
 }
 export default GameController

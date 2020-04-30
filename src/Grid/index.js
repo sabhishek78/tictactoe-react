@@ -1,5 +1,6 @@
 import React from "react";
 import Square from "../Square";
+import "./styles.css"
 // class Grid extends React.Component {
 //     getGridRow(offset) {
 //         return (<div className="grid-row">

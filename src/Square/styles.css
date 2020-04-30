@@ -6,6 +6,9 @@
     color:floralwhite;
     font-size: 50px;
     background-color: lightblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
